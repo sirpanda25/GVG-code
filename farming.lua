@@ -1,6 +1,6 @@
 isright = true
-for i = 1,8,-1 do
-    for i = 1,20,-1 do
+for i = 1,8,1 do
+    for i = 1,20,1 do
         turtle.forward()
         block = turtle.inspectDown()
         if 7 == block.state.age then
