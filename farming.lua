@@ -1,1 +1,1 @@
-beans
+turtle.forward()
