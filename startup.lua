@@ -1,9 +1,12 @@
-local gitURL = "https://github.com/sirpanda25/GVG-code"
-local codename = "farming.lua"
+local gitURL = "https://raw.githubusercontent.com/sirpanda25/GVG-code"
+local filename = "farming.lua"
 
-file = io.open(codename, "w")
+file = fs.open(filename, "w")
 
-file.write(http.get(gitURL .. "/" ..  codename).readall)
+codeURL = gitURL .. "/main/" .. filename
+
+code = fs.http.get(codeURL)
+
+file.write(code.readAll())
 
 file.close()
-
